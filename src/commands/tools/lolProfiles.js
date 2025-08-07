@@ -13,7 +13,7 @@ module.exports = {
 
   async execute(interaction) {
     const menu = new StringSelectMenuBuilder()
-      .setCustomId("lol-profiles")
+      .setCustomId("lolProfiles")
       .setMinValues(1)
       .setMaxValues(5)
       .setPlaceholder("Choose your summoner(s)")

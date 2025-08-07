@@ -11,7 +11,7 @@ module.exports = {
     .setDescription(`Returns a button.`),
   async execute(interaction) {
     const button = new ButtonBuilder()
-      .setCustomId("test-button")
+      .setCustomId("testButton")
       .setLabel("Click Me!")
       .setStyle(ButtonStyle.Success);
 

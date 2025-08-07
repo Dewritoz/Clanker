@@ -15,12 +15,12 @@ module.exports = (client) => {
       },
       {
         type: ActivityType.Listening,
-        name: "to clanker ASMR",
+        name: "to CCP propaganda",
         status: "online",
       },
       {
         type: ActivityType.Streaming,
-        name: "bot slammage",
+        name: "Clankerpunk 2077",
         status: "online",
       },
     ];

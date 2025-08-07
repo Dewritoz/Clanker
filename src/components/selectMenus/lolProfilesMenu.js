@@ -1,6 +1,6 @@
 module.exports = {
   data: {
-    name: "lol-profiles",
+    name: "lolProfiles",
   },
   async execute(interaction) {
     const selectedLinks = interaction.values.join("\n");
