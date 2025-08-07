@@ -31,6 +31,21 @@ module.exports = {
           ephemeral: true,
         });
       }
+    } else if (interaction.isSelectMenu()) {
+      const { selectMenus } = client;
+      const { customId } = interaction;
+      const selectMenu = selectMenus.get(customId);
+      if (!selectMenu) return new Error(`No select menu found with the custom ID: ${customId}`);
+
+      try {
+        await selectMenu.execute(interaction, client);
+      } catch (error) {
+        console.error(error);
+        await interaction.reply({
+          content: `Something has gone wrong while executing this select menu.`,
+          ephemeral: true,
+        });
+      }
     }
   },
 };

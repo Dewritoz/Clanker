@@ -7,16 +7,16 @@ const {
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("button")
+    .setName("test-button")
     .setDescription(`Returns a button.`),
   async execute(interaction) {
     const button = new ButtonBuilder()
-      .setCustomId("youtube")
+      .setCustomId("test-button")
       .setLabel("Click Me!")
       .setStyle(ButtonStyle.Success);
 
     await interaction.reply({
-      content: "example button",
+      content: "I have your button ready!",
       components: [new ActionRowBuilder().addComponents(button)],
     });
   },

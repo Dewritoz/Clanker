@@ -2,7 +2,7 @@ const { name } = require("../../events/client/interactionCreate");
 
 module.exports = {
   data: {
-    name: "youtube",
+    name: "test-button",
     description: "Sends Dew's YouTube link",
   },
   async execute(interaction) {

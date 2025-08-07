@@ -6,6 +6,6 @@ module.exports = {
     .setDescription("Hello World!"),
 
   async execute(interaction) {
-    await interaction.reply("Wassup, ihr bitch ahh clankers");
+    await interaction.reply("Sup? Bitch ahh clankers <:Cheers:1185984511243194560>");
   },
 };
