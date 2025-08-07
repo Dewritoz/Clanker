@@ -1,4 +1,4 @@
-const { InteractionType } = require("discord.js"); 
+const { InteractionType } = require("discord.js");
 
 module.exports = {
   name: "interactionCreate",
@@ -22,7 +22,8 @@ module.exports = {
       const { buttons } = client;
       const { customId } = interaction;
       const button = buttons.get(customId);
-      if (!button) return new Error(`No button found with the custom ID: ${customId}`);
+      if (!button)
+        return new Error(`No button found with the custom ID: ${customId}`);
 
       try {
         await button.execute(interaction, client);
@@ -37,7 +38,10 @@ module.exports = {
       const { selectMenus } = client;
       const { customId } = interaction;
       const selectMenu = selectMenus.get(customId);
-      if (!selectMenu) return new Error(`No select menu found with the custom ID: ${customId}`);
+      if (!selectMenu)
+        return new Error(
+          `No select menu found with the custom ID: ${customId}`
+        );
 
       try {
         await selectMenu.execute(interaction, client);
@@ -52,7 +56,8 @@ module.exports = {
       const { modals } = client;
       const { customId } = interaction;
       const modal = modals.get(customId);
-      if (!modal) return new Error(`No modal found with the custom ID: ${customId}`);
+      if (!modal)
+        return new Error(`No modal found with the custom ID: ${customId}`);
 
       try {
         await modal.execute(interaction, client);
@@ -60,6 +65,24 @@ module.exports = {
         console.error(error);
         await interaction.reply({
           content: `Something has gone wrong while executing this modal.`,
+          ephemeral: true,
+        });
+      }
+    } else if (interaction.isContextMenuCommand()) {
+      const { commands } = client;
+      const { commandName } = interaction;
+      const command = commands.get(commandName);
+      if (!command)
+        return new Error(
+          `No context menu command found with the name: ${commandName}`
+        );
+
+      try {
+        await command.execute(interaction, client);
+      } catch (error) {
+        console.error(error);
+        await interaction.reply({
+          content: `Something has gone wrong while executing this context menu command.`,
           ephemeral: true,
         });
       }
