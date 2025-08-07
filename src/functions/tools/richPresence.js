@@ -5,17 +5,22 @@ module.exports = (client) => {
     const options = [
       {
         type: ActivityType.Playing,
-        name: "with other clankers",
+        name: "with my metal rod",
         status: "online",
       },
       {
         type: ActivityType.Watching,
-        name: "bot slammage",
+        name: "AI generated AVs",
         status: "online",
       },
       {
         type: ActivityType.Listening,
-        name: "to AI generated rap",
+        name: "to clanker ASMR",
+        status: "online",
+      },
+      {
+        type: ActivityType.Streaming,
+        name: "bot slammage",
         status: "online",
       },
     ];
