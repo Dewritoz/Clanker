@@ -3,7 +3,7 @@ const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("coinflip")
-    .setDescription("Flip a coin and see the result!"),
+    .setDescription("Flip a coin"),
 
   async execute(interaction) {
     const loadingEmbed = new EmbedBuilder()

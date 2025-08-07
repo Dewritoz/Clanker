@@ -8,7 +8,7 @@ const {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("test-button")
-    .setDescription(`Returns a button.`),
+    .setDescription(`Returns a button`),
   async execute(interaction) {
     const button = new ButtonBuilder()
       .setCustomId("testButton")

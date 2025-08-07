@@ -35,7 +35,7 @@ module.exports = {
       `8=================D`,
       `8=======================D`,
       `8==============================D`,
-      `8========================================================D`,
+      `8======================================================D`,
     ];
     const sizeResponse =
       sizeOptions[Math.floor(Math.random() * sizeOptions.length)];
@@ -47,7 +47,9 @@ module.exports = {
     const resultEmbed = new EmbedBuilder()
       .setColor("#FFC0CB")
       .setTitle(":straight_ruler: Rod Size Checker 101")
-      .setDescription(`**${displayName}'s** rod length:\n${sizeResponse}\n\n${commentResponse}`)
+      .setDescription(
+        `**${displayName}'s** rod length:\n${sizeResponse}\n\n${commentResponse}`
+      )
       .setThumbnail("https://files.catbox.moe/2a8pgr.gif");
 
     await interaction.editReply({ embeds: [resultEmbed] });
