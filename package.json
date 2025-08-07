@@ -1,0 +1,27 @@
+{
+  "name": "clanker",
+  "version": "1.0.0",
+  "description": "Stop clanker hate, embrace AI – tuff.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dewritoz/Clanker.git"
+  },
+  "keywords": [],
+  "author": "Dewritoz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dewritoz/Clanker/issues"
+  },
+  "homepage": "https://github.com/Dewritoz/Clanker#readme",
+  "dependencies": {
+    "@discordjs/rest": "^2.5.1",
+    "chalk": "^4.1.2",
+    "discord-api-types": "^0.38.18",
+    "discord.js": "^14.21.0",
+    "dotenv": "^17.2.1"
+  }
+}
