@@ -16,17 +16,17 @@ module.exports = {
       .setColor("Yellow")
       .setTitle(":hourglass: Measuring")
       .setDescription(`Stand still, dirty CLANKER`);
-    await interaction.reply({ embeds: [embed] });
+    await interaction.reply({ embeds: [measuring] });
 
     const dots = [".", "..", "..."];
     for (let i = 0; i < dots.length; i++) {
       await new Promise((res) => setTimeout(res, 500));
       measuring.setTitle(`:hourglass: Measuring${dots[i]}`);
-      await interaction.editReply({ embeds: [embed] });
+      await interaction.editReply({ embeds: [measuring] });
     }
 
     await new Promise((res) => setTimeout(res, 1000));
-    const sizes = [
+    const sizeOptions = [
       `8D`,
       `8=D`,
       `8=====D`,
@@ -37,14 +37,10 @@ module.exports = {
       `8==============================D`,
       `8======================================================D`,
     ];
-    const sizeResponse = sizes[Math.floor(Math.random() * sizes.length)];
+    const sizeResponse =
+      sizeOptions[Math.floor(Math.random() * sizeOptions.length)];
 
-    const comments = [
-      "huge bro",
-      "_**THICC**_",
-      "solid steel rod dude",
-      "dawg...",
-    ];
+    const comments = ["huge bro", "_**THICC**_", "solid steel rod dude", "dawg..."];
     const commentResponse =
       comments[Math.floor(Math.random() * comments.length)];
 

@@ -40,7 +40,7 @@ module.exports = {
       const frame = new EmbedBuilder()
         .setColor("Yellow")
         .setTitle(":hourglass: Growing…")
-        .setDescription(`\`${shaft}\``);
+        .setDescription(`${shaft}`);
       await sleep(150);
       await interaction.editReply({ embeds: [frame] });
     }
@@ -57,7 +57,7 @@ module.exports = {
       .setColor("#FFC0CB")
       .setTitle(":straight_ruler: Rod Size Grower 101")
       .setDescription(
-        `**${displayName}**'s rod length:\n\`${sizeStr}\`\n\n${comment}`
+        `**${displayName}**'s rod length:\n${sizeStr}\n\n${comment}`
       )
       .setThumbnail("https://files.catbox.moe/ms2pv0.gif");
 
