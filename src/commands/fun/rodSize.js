@@ -12,7 +12,7 @@ module.exports = {
     const member = interaction.options.getMember("user") || interaction.member;
     const displayName = member.displayName;
 
-    const embed = new EmbedBuilder()
+    const measuring = new EmbedBuilder()
       .setColor("Yellow")
       .setTitle(":hourglass: Measuring")
       .setDescription(`Stand still, dirty CLANKER`);
@@ -21,12 +21,12 @@ module.exports = {
     const dots = [".", "..", "..."];
     for (let i = 0; i < dots.length; i++) {
       await new Promise((res) => setTimeout(res, 500));
-      embed.setTitle(`:hourglass: Measuring${dots[i]}`);
+      measuring.setTitle(`:hourglass: Measuring${dots[i]}`);
       await interaction.editReply({ embeds: [embed] });
     }
 
     await new Promise((res) => setTimeout(res, 1000));
-    const sizeOptions = [
+    const sizes = [
       `8D`,
       `8=D`,
       `8=====D`,
@@ -37,12 +37,16 @@ module.exports = {
       `8==============================D`,
       `8======================================================D`,
     ];
-    const sizeResponse =
-      sizeOptions[Math.floor(Math.random() * sizeOptions.length)];
+    const sizeResponse = sizes[Math.floor(Math.random() * sizes.length)];
 
-    const commentOptions = ["huge bro", "_**THICC**_", "???", "dawg..."];
+    const comments = [
+      "huge bro",
+      "_**THICC**_",
+      "solid steel rod dude",
+      "dawg...",
+    ];
     const commentResponse =
-      commentOptions[Math.floor(Math.random() * commentOptions.length)];
+      comments[Math.floor(Math.random() * comments.length)];
 
     const resultEmbed = new EmbedBuilder()
       .setColor("#FFC0CB")
